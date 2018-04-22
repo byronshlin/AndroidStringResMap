@@ -1,6 +1,6 @@
-## AndroidStringResMap
+# AndroidStringResMap
 
-# StringsResCSVGen
+## StringsResCSVGen
 
 shell> python AndroidStringResMap zh-rTW in
 
@@ -36,7 +36,7 @@ resources, en, zh-rTW, in, es
 app_name,Movie,電影,Film,Película
 ```
 
-# StringsResXMLGen
+## StringsResXMLGen
 process the output.xml from StringsResCSVGen.
 
 [TODO] not support empty string resource..
