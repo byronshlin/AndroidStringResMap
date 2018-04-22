@@ -1,5 +1,6 @@
-# AndroidStringResMap
+## AndroidStringResMap
 
+# StringsResCSVGen
 
 shell> python AndroidStringResMap zh-rTW in
 
@@ -34,5 +35,10 @@ output.csv as followings:
 resources, en, zh-rTW, in, es
 app_name,Movie,電影,Film,Película
 ```
+
+# StringsResXMLGen
+process the output.xml from StringsResCSVGen.
+
+[TODO] not support empty string resource..
 
 
