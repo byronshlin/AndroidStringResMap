@@ -3,6 +3,7 @@ import csv
 import sys
 import re
 import os
+import getopt
 
 def readFiles(fileName):
     with open(fileName) as f:
@@ -103,12 +104,15 @@ def generateStringCSV(*argcs):
     except:
         pass
     mainStrings = scanDirectoryAndGenerateStrings("values")
+    print("scan folder "+"values and"+ " get "+str(len(mainStrings))+ " string resources")
     titles=['resources', "en"]
     for lang in argcs:
         try:
-            localeStrings = scanDirectoryAndGenerateStrings("values-"+lang)
+            folder="values-"+lang
+            localeStrings = scanDirectoryAndGenerateStrings(folder)
             mainStrings = mergetDict(mainStrings, localeStrings)
             titles.append(lang)
+            print("scan folder "+folder+" and"+ " get "+str(len(localeStrings))+ " string resources")
         except:
             pass
     stringsListList = transferList(mainStrings)
@@ -128,8 +132,18 @@ def generateStringCSVByArgc(argc):
         params=["zh-rTW", "in"]
     generateStringCSV(*params)
 
+#  -p
 def main(argv):
-    #generateStringCSV("zh-rTW", "in")
+    #args = argv[1:]
+    #print(args)
+    #optlist = None
+    #result = None
+    #try:
+    #    optlist, result = getopt.getopt(args, 'p:')
+    #except getopt.GetoptError as err:
+    #    pass
+    #print(optlist)
+    #print(result)
     generateStringCSVByArgc(argv)
 
 if __name__ == "__main__":
