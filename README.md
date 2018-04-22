@@ -3,10 +3,10 @@
 
 shell> python AndroidStringResMap zh-rTW in
 
-It scans all strings resources inside the following folders,
-values
-values-zh-rTW
-values-in
+It scans all strings resources inside the following folders,<br>
+values  
+values-zh-rTW  
+values-in  
 
 
 then generates a csv file, 'output.csv'
